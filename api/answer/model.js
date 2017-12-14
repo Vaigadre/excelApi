@@ -8,15 +8,3 @@ const AnswerSchema = new mongoose.Schema ({
 const Answer = module.exports = mongoose.model ('Answer', AnswerSchema)
 
 
-
-// Request Object : {
-// questionId: '',
-// formulas: '',
-// text: '',
-// values : '',
-// address: ''
-// }
-// Response Obj: {
-// '_id': ''
-// }
- 

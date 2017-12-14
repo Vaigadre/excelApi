@@ -11,7 +11,7 @@ const controller = require ('./controller')
  *       name:
  *         type: "string"
  *         example: "Maths" 
- *       value:
+ *       state:
  *         type: "object"
  *       gradedCells:
  *         type: "array"

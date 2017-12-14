@@ -11,13 +11,7 @@ const controller = require ("./controller")
  *     properties:
  *       questionId:
  *         type: "string"
- *       address:
- *         type: "string"
- *       formulas:
- *         type: "array"
- *       text:
- *         type: "array"
- *       values:
+ *       gradedCells:
  *         type: "array"
  */
 

@@ -5,13 +5,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-<<<<<<< HEAD
-=======
 # DB folder
 data/
-.vscode/
 
->>>>>>> Excel api added
+# IDE - VSCode
+.vscode/*
+
+
 # Runtime data
 pids
 *.pid
@@ -62,9 +62,4 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-<<<<<<< HEAD
 .env
-
-=======
-.env
->>>>>>> Excel api added

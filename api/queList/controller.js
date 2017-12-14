@@ -7,6 +7,7 @@ module.exports.getQueList = function (req, res) {
          "limit": parseInt(req.query.records)
      }
  
+
      QueList.find({}, {"__v": 0}, options).then( (ques) => {
          res.json(ques)
      }).catch ( (err) => {

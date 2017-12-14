@@ -21,6 +21,9 @@ router.use ('/student-response', studentResponse)
 router.use ('/score', score)
 
 
+module.exports = router;
+
+
 
 /*
 var fs = require('fs');
@@ -38,4 +41,4 @@ fs.readdirSync(__dirname).forEach(function(file) {
 });
 */
 
-module.exports = router;
+
