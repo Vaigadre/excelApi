@@ -4,13 +4,14 @@ const StateQuestion = require ('./model')
 module.exports.setStateQue = function (req, res) {
     let que = new StateQuestion ({
         name: req.body.name,
-        state: req.body.state,
-        gradedCells: req.body.gradedCells
+        state: req.body.state
+       // gradedCells: req.body.gradedCells
     })
 
     StateQuestion.create(que).then( (que) =>{
-        res.status (201)
-        res.send({_id:que._id})          
+        res.status (201);
+        console.log("Question Object: "+ que);
+        res.json({id:que._id})          
     }).catch( (err) => {
        res.send(err)
     })
@@ -20,7 +21,8 @@ module.exports.setStateQue = function (req, res) {
 
 module.exports.getStateQueById = function (req, res) {
     StateQuestion.findOne ( {_id: req.params.id},  {"__v": 0}).then ((que) => {
-        res.json(que)
+        res.json(que);
+        Console.log("Getting answer with Question ID: " + req.params.id);
     }).catch ( (err) => {
        res.send(err)
     })

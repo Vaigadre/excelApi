@@ -2,17 +2,18 @@ const express = require('express')
 const mongoose = require ('mongoose')
 //const router = express.Router();
 const bodyParser = require ('body-parser')
-const path = require ('path')
+const path = require ('path');
+const cors = require('cors');
 
 const swaggerJSDoc = require ('swagger-jsdoc')
 
 const medium = require ("./api/medium")
 
-mongoose.connect ('mongodb://127.0.0.1:27017/test',  {useMongoClient: true,  /* other options */})
+mongoose.connect ('mongodb://127.0.0.1:27017/EHR',  {useMongoClient: true,  /* other options */})
 
 var db = mongoose.connection;
 
-mongoose.Promise = global.Promise
+mongoose.Promise = global.Promise;
 
 db.on('error', (err) => {
 	console.log(err)
@@ -45,7 +46,7 @@ const options = {
 // initilalize swagger-jsdoc
 const swaggerSpec = swaggerJSDoc(options)
 
-
+app.use(cors());
 // parse application/json
 app.use(bodyParser.json())
 
@@ -75,8 +76,8 @@ app.use ( (err, req, res, next) => {
 
 
 
-app.listen(3000, () => {
-   console.log ("Server is running on port 3000")
+app.listen(3200, () => {
+   console.log ("Server is running on port 3200")
 });
 
 

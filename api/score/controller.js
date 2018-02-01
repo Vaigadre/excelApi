@@ -1,10 +1,11 @@
 const Score = require ('./model')
+const scoreData = require ("../scoreData");
+const getEHRScore = require ("../getEHRScore");
 
 
 module.exports.getScores = function (req, res) {
-    Score.find({}, {"__v": 0}).then( (result)=> {
-       res.json(result)
-    })
+    //Add descramble logic here to get state, ans and student response
+    res.json({Score: getEHRScore(scoreData.que, scoreData.ans, 'demo', '1', 'score')});
 }
 
 module.exports.setScore = function (req, res) {
@@ -21,7 +22,7 @@ module.exports.setScore = function (req, res) {
 
 module.exports.updateScore = function  (req, res) {
     Score.findByIdAndUpdate ({_id: req.params.id}, req.body).then ( (result) => {
-        res.json(result)
+        res.json(result);
     })
 }
 

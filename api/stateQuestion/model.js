@@ -4,9 +4,8 @@ const mongoose = require ('mongoose')
 
 const StateQuestionSchema = new  mongoose.Schema ({
     "name": {type: "String"},
-    "state": {type: "Object"},
-    "gradedCells": []
+    "state": {type: "String"}
+//    "gradedCells": []
 })
 
 const StateQuestion = module.exports = mongoose.model ('StateQuestion', StateQuestionSchema)
-

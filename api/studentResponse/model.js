@@ -2,9 +2,8 @@ const mongoose = require ('mongoose')
 
 
 const StudentResponseSchema = new mongoose.Schema ({
-    question: "String",
-    answer: "String",
-    duration: "String"
+   "questionId": "String",
+   "answer": []
 })
 
 
