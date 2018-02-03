@@ -3,7 +3,7 @@ const mongoose = require ('mongoose')
 
 const StudentResponseSchema = new mongoose.Schema ({
    "questionId": "String",
-   "answer": []
+   "answer": "String"
 })
 
 
